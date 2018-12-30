@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8905C50821D91E3600CD7260 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905C50721D91E3600CD7260 /* CategoriesController.swift */; };
+		8905C50A21D91E4F00CD7260 /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905C50921D91E4F00CD7260 /* TasksController.swift */; };
+		8905C50E21D91F1900CD7260 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905C50D21D91F1900CD7260 /* Category.swift */; };
+		8905C51021D91F2B00CD7260 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905C50F21D91F2B00CD7260 /* Task.swift */; };
+		8905C51221D9224700CD7260 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905C51121D9224700CD7260 /* SwipeViewController.swift */; };
+		8905C51421D9240400CD7260 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905C51321D9240400CD7260 /* CategoryCell.swift */; };
+		8905C51621D9241900CD7260 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905C51521D9241900CD7260 /* TaskCell.swift */; };
 		891FB0A521D8DACA006DFAC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FB0A421D8DACA006DFAC1 /* AppDelegate.swift */; };
 		891FB0AA21D8DACA006DFAC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891FB0A821D8DACA006DFAC1 /* Main.storyboard */; };
 		891FB0AC21D8DACC006DFAC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891FB0AB21D8DACC006DFAC1 /* Assets.xcassets */; };
@@ -21,6 +28,13 @@
 /* Begin PBXFileReference section */
 		4DED60155E29E0A465EAB311 /* Pods-firelist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firelist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-firelist/Pods-firelist.debug.xcconfig"; sourceTree = "<group>"; };
 		7DA98D6AABBA67A6C87628DE /* Pods_firelist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firelist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8905C50721D91E3600CD7260 /* CategoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesController.swift; sourceTree = "<group>"; };
+		8905C50921D91E4F00CD7260 /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
+		8905C50D21D91F1900CD7260 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8905C50F21D91F2B00CD7260 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		8905C51121D9224700CD7260 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		8905C51321D9240400CD7260 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		8905C51521D9241900CD7260 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		891FB0A121D8DACA006DFAC1 /* firelist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firelist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		891FB0A421D8DACA006DFAC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		891FB0A921D8DACA006DFAC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +80,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8905C50421D91DF200CD7260 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				891FB0B821D8E420006DFAC1 /* AuthController.swift */,
+				8905C50721D91E3600CD7260 /* CategoriesController.swift */,
+				8905C50921D91E4F00CD7260 /* TasksController.swift */,
+				8905C51121D9224700CD7260 /* SwipeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8905C50B21D91EE900CD7260 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8905C50D21D91F1900CD7260 /* Category.swift */,
+				8905C50F21D91F2B00CD7260 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8905C50C21D91EF000CD7260 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8905C51321D9240400CD7260 /* CategoryCell.swift */,
+				8905C51521D9241900CD7260 /* TaskCell.swift */,
+			);
+			name = View;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		891FB09821D8DACA006DFAC1 = {
 			isa = PBXGroup;
 			children = (
@@ -87,9 +131,11 @@
 		891FB0A321D8DACA006DFAC1 /* firelist */ = {
 			isa = PBXGroup;
 			children = (
-				891FB0BA21D8F338006DFAC1 /* Custom */,
 				891FB0A421D8DACA006DFAC1 /* AppDelegate.swift */,
-				891FB0B821D8E420006DFAC1 /* AuthController.swift */,
+				891FB0BA21D8F338006DFAC1 /* Custom */,
+				8905C50C21D91EF000CD7260 /* View */,
+				8905C50B21D91EE900CD7260 /* Model */,
+				8905C50421D91DF200CD7260 /* Controller */,
 				891FB0A821D8DACA006DFAC1 /* Main.storyboard */,
 				891FB0AB21D8DACC006DFAC1 /* Assets.xcassets */,
 				891FB0AD21D8DACC006DFAC1 /* LaunchScreen.storyboard */,
@@ -192,6 +238,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -200,6 +247,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -233,10 +281,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8905C51021D91F2B00CD7260 /* Task.swift in Sources */,
 				891FB0A521D8DACA006DFAC1 /* AppDelegate.swift in Sources */,
+				8905C51221D9224700CD7260 /* SwipeViewController.swift in Sources */,
 				891FB0C121D8F39C006DFAC1 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				891FB0C021D8F39C006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				8905C50821D91E3600CD7260 /* CategoriesController.swift in Sources */,
+				8905C50A21D91E4F00CD7260 /* TasksController.swift in Sources */,
+				8905C51621D9241900CD7260 /* TaskCell.swift in Sources */,
 				891FB0B921D8E420006DFAC1 /* AuthController.swift in Sources */,
+				8905C50E21D91F1900CD7260 /* Category.swift in Sources */,
+				8905C51421D9240400CD7260 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
