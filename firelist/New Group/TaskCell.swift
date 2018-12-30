@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class TaskCell: UITableViewCell {
+class TaskCell: SwipeTableViewCell {
     
     @IBOutlet weak var titleTextLabel: UILabel!
     @IBOutlet weak var checkmarkTextLabel: UILabel!

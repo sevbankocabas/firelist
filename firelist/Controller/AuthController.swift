@@ -97,12 +97,19 @@ class AuthController: UIViewController {
             }
             
             //Success
-            print("Success Register")
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let controller: CategoriesController = storyboard.instantiateViewController(withIdentifier: "CategoriesVC") as! CategoriesController
+            let navigationViewController = UINavigationController(rootViewController: controller)
+            self.present(navigationViewController, animated: true, completion: nil)
             SVProgressHUD.dismiss()
-            let alert = UIAlertController(title: "Success", message: "Registration is successful", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+            
+            
+//            print("Success Register")
+//            SVProgressHUD.dismiss()
+//            let alert = UIAlertController(title: "Success", message: "Registration is successful", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+//            alert.addAction(action)
+//            self.present(alert, animated: true, completion: nil)
             
         })
         
@@ -120,12 +127,18 @@ class AuthController: UIViewController {
                 return
             }
             //Success
-            print("Success Login")
+            
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let controller: CategoriesController = storyboard.instantiateViewController(withIdentifier: "CategoriesVC") as! CategoriesController
+            let navigationViewController = UINavigationController(rootViewController: controller)
+            self.present(navigationViewController, animated: true, completion: nil)
             SVProgressHUD.dismiss()
-            let alert = UIAlertController(title: "Success", message: "Login is successful", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+//            print("Success Login")
+//            SVProgressHUD.dismiss()
+//            let alert = UIAlertController(title: "Success", message: "Login is successful", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+//            alert.addAction(action)
+//            self.present(alert, animated: true, completion: nil)
         }
     }
     

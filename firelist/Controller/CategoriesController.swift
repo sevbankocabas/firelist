@@ -16,11 +16,12 @@ class CategoriesController: SwipeViewController {
     var userID: String?
     var selectedCategoryID: String?
     var selectedCategoryName: String?
+    var numberOfTasks: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        userID = Auth.auth().currentUser!.uid
         loadCategories()
-
         
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,24 +33,40 @@ class CategoriesController: SwipeViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! CategoryCell
-        cell.titleTextLabel.text = categories[indexPath.row].title
-        cell.numberTextLabel.text = String(describing: categories[indexPath.row].numberOfTasks)
+
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        let number = String(describing: categories[indexPath.row].numberOfTasks!)
+        cell.textLabel?.text = "\(categories[indexPath.row].title!) (\(number))"
         return cell
-        
+
     }
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! CategoryCell
+//        let number = String(describing: categories[indexPath.row].numberOfTasks!)
+//        cell.titleTextLabel?.text = categories[indexPath.row].title
+//        cell.numberTextLabel.text = number
+//        return cell
+//
+//    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCategoryID = categories[indexPath.row].id
         selectedCategoryName = categories[indexPath.row].title
+        numberOfTasks = categories[indexPath.row].numberOfTasks
         performSegue(withIdentifier: "goToTasks", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToTasks" {
         let TasksVC = segue.destination as! TasksController
         TasksVC.categoryID = selectedCategoryID
         TasksVC.categoryName = selectedCategoryName
+        TasksVC.numberOfTasks = numberOfTasks
+        } else {
+            handleLogout()
+        }
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
@@ -115,7 +132,7 @@ class CategoriesController: SwipeViewController {
     }
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
-        handleLogout()
+        performSegue(withIdentifier: "goToAuth", sender: self)
     }
     func handleLogout() {
         do {
