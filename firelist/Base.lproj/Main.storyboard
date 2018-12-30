@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW2-6V-4R1">
-                                                <rect key="frame" x="0.0" y="218.5" width="375" height="230"/>
+                                                <rect key="frame" x="0.0" y="198.5" width="375" height="270"/>
                                                 <subviews>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i94-KN-lDt">
                                                         <rect key="frame" x="77.5" y="0.0" width="220" height="41"/>
@@ -43,7 +43,7 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl6-by-PrG">
-                                                        <rect key="frame" x="162.5" y="190" width="50" height="40"/>
+                                                        <rect key="frame" x="162.5" y="230" width="50" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="UcP-y6-twI"/>
                                                             <constraint firstAttribute="width" constant="50" id="p3Q-Dz-E50"/>
@@ -56,7 +56,7 @@
                                                         </connections>
                                                     </button>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByC-dd-hBS">
-                                                        <rect key="frame" x="157.5" y="190" width="60" height="40"/>
+                                                        <rect key="frame" x="157.5" y="230" width="60" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="60" id="C5d-0G-Tf3"/>
                                                             <constraint firstAttribute="height" constant="40" id="UNh-Pc-JjZ"/>
@@ -69,7 +69,7 @@
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o78-3b-Q2D">
-                                                        <rect key="frame" x="50" y="136" width="275" height="40"/>
+                                                        <rect key="frame" x="50" y="150" width="275" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="275" id="Zps-2v-DKr"/>
                                                             <constraint firstAttribute="height" constant="40" id="kRM-gK-Zkf"/>
@@ -79,7 +79,7 @@
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cd9-x3-ckL">
-                                                        <rect key="frame" x="50" y="86" width="275" height="40"/>
+                                                        <rect key="frame" x="50" y="100" width="275" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="275" id="27c-rn-taI"/>
                                                             <constraint firstAttribute="height" constant="40" id="bIb-JP-wSD"/>
@@ -99,9 +99,9 @@
                                                     <constraint firstItem="Cd9-x3-ckL" firstAttribute="centerX" secondItem="jW2-6V-4R1" secondAttribute="centerX" id="YWb-4i-szs"/>
                                                     <constraint firstAttribute="bottom" secondItem="ByC-dd-hBS" secondAttribute="bottom" id="cqe-GU-PEo"/>
                                                     <constraint firstItem="ByC-dd-hBS" firstAttribute="centerX" secondItem="jW2-6V-4R1" secondAttribute="centerX" id="nDt-Me-xOH"/>
-                                                    <constraint firstAttribute="height" constant="230" id="p79-3v-u9N"/>
+                                                    <constraint firstAttribute="height" constant="270" id="p79-3v-u9N"/>
                                                     <constraint firstItem="o78-3b-Q2D" firstAttribute="centerX" secondItem="jW2-6V-4R1" secondAttribute="centerX" id="uRE-3N-oj4"/>
-                                                    <constraint firstItem="Fl6-by-PrG" firstAttribute="top" secondItem="o78-3b-Q2D" secondAttribute="bottom" constant="14" id="xVh-AT-hKW"/>
+                                                    <constraint firstItem="Fl6-by-PrG" firstAttribute="top" secondItem="o78-3b-Q2D" secondAttribute="bottom" constant="40" id="xVh-AT-hKW"/>
                                                     <constraint firstItem="i94-KN-lDt" firstAttribute="top" secondItem="jW2-6V-4R1" secondAttribute="top" id="ydQ-Ld-bZ8"/>
                                                 </constraints>
                                             </view>
