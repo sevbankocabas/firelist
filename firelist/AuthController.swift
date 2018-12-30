@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
+
 
 class AuthController: UIViewController {
     
@@ -27,9 +29,6 @@ class AuthController: UIViewController {
         ref = Database.database().reference()
     }
     
-    
-    
-    
     @IBAction func segmentValueChanged(_ sender: Any) {
         
         if segmentedControl.selectedSegmentIndex == 0 {
@@ -44,6 +43,7 @@ class AuthController: UIViewController {
     
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        SVProgressHUD.show()
         guard let email = emailTextField.text?.lowercased() else {return}
         guard let password = passwordTextField.text else {return}
         
@@ -53,9 +53,10 @@ class AuthController: UIViewController {
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
-        
+        SVProgressHUD.show()
         guard let email = emailTextField.text?.lowercased() else {return}
         guard let password = passwordTextField.text else {return}
+        
         registerUser(email: email, password: password)
         
         
@@ -67,13 +68,20 @@ class AuthController: UIViewController {
             
             if error != nil {
                 print(error ?? "")
+                SVProgressHUD.dismiss()
+                let alert = UIAlertController(title: "Error", message: "Registration is unsuccessful", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
                 return
             }
+            
+            
             guard let uid = result?.user.uid else {return}
             let dic = ["email": email] as [String: AnyObject]
             
             self.saveUserIntoDatabase(uid, dic)
-            
+            SVProgressHUD.dismiss()
         }
         
     }
@@ -90,6 +98,11 @@ class AuthController: UIViewController {
             
             //Success
             print("Success Register")
+            SVProgressHUD.dismiss()
+            let alert = UIAlertController(title: "Success", message: "Registration is successful", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
             
         })
         
@@ -98,11 +111,21 @@ class AuthController: UIViewController {
     func login(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
-                print(error)
+                print(error ?? "")
+                SVProgressHUD.dismiss()
+                let alert = UIAlertController(title: "Error", message: "Login is unsuccessful", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
                 return
             }
             //Success
             print("Success Login")
+            SVProgressHUD.dismiss()
+            let alert = UIAlertController(title: "Success", message: "Login is successful", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
