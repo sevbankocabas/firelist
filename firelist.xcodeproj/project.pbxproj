@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		891FB0A521D8DACA006DFAC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FB0A421D8DACA006DFAC1 /* AppDelegate.swift */; };
-		891FB0A721D8DACA006DFAC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FB0A621D8DACA006DFAC1 /* ViewController.swift */; };
 		891FB0AA21D8DACA006DFAC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891FB0A821D8DACA006DFAC1 /* Main.storyboard */; };
 		891FB0AC21D8DACC006DFAC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891FB0AB21D8DACC006DFAC1 /* Assets.xcassets */; };
 		891FB0AF21D8DACC006DFAC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891FB0AD21D8DACC006DFAC1 /* LaunchScreen.storyboard */; };
 		891FB0B721D8DC33006DFAC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891FB0B621D8DC33006DFAC1 /* GoogleService-Info.plist */; };
+		891FB0B921D8E420006DFAC1 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FB0B821D8E420006DFAC1 /* AuthController.swift */; };
+		891FB0C021D8F39C006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 891FB0BD21D8F39B006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		891FB0C121D8F39C006DFAC1 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891FB0BE21D8F39B006DFAC1 /* TPKeyboardAvoidingScrollView.m */; };
 		99C9B129557DB870E1BBB739 /* Pods_firelist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA98D6AABBA67A6C87628DE /* Pods_firelist.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +23,17 @@
 		7DA98D6AABBA67A6C87628DE /* Pods_firelist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firelist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891FB0A121D8DACA006DFAC1 /* firelist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firelist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		891FB0A421D8DACA006DFAC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		891FB0A621D8DACA006DFAC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		891FB0A921D8DACA006DFAC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		891FB0AB21D8DACC006DFAC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		891FB0AE21D8DACC006DFAC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		891FB0B021D8DACC006DFAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		891FB0B621D8DC33006DFAC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		891FB0B821D8E420006DFAC1 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		891FB0BB21D8F39A006DFAC1 /* firelist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "firelist-Bridging-Header.h"; sourceTree = "<group>"; };
+		891FB0BC21D8F39B006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		891FB0BD21D8F39B006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		891FB0BE21D8F39B006DFAC1 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		891FB0BF21D8F39C006DFAC1 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		90BC87EDFDB73E353434E899 /* Pods-firelist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firelist.release.xcconfig"; path = "Pods/Target Support Files/Pods-firelist/Pods-firelist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,8 +87,9 @@
 		891FB0A321D8DACA006DFAC1 /* firelist */ = {
 			isa = PBXGroup;
 			children = (
+				891FB0BA21D8F338006DFAC1 /* Custom */,
 				891FB0A421D8DACA006DFAC1 /* AppDelegate.swift */,
-				891FB0A621D8DACA006DFAC1 /* ViewController.swift */,
+				891FB0B821D8E420006DFAC1 /* AuthController.swift */,
 				891FB0A821D8DACA006DFAC1 /* Main.storyboard */,
 				891FB0AB21D8DACC006DFAC1 /* Assets.xcassets */,
 				891FB0AD21D8DACC006DFAC1 /* LaunchScreen.storyboard */,
@@ -89,6 +97,18 @@
 				891FB0B621D8DC33006DFAC1 /* GoogleService-Info.plist */,
 			);
 			path = firelist;
+			sourceTree = "<group>";
+		};
+		891FB0BA21D8F338006DFAC1 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				891FB0BF21D8F39C006DFAC1 /* TPKeyboardAvoidingScrollView.h */,
+				891FB0BE21D8F39B006DFAC1 /* TPKeyboardAvoidingScrollView.m */,
+				891FB0BC21D8F39B006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				891FB0BD21D8F39B006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				891FB0BB21D8F39A006DFAC1 /* firelist-Bridging-Header.h */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +145,7 @@
 				TargetAttributes = {
 					891FB0A021D8DACA006DFAC1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -210,8 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891FB0A721D8DACA006DFAC1 /* ViewController.swift in Sources */,
 				891FB0A521D8DACA006DFAC1 /* AppDelegate.swift in Sources */,
+				891FB0C121D8F39C006DFAC1 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				891FB0C021D8F39C006DFAC1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				891FB0B921D8E420006DFAC1 /* AuthController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +381,7 @@
 			baseConfigurationReference = 4DED60155E29E0A465EAB311 /* Pods-firelist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82QJ699VC6;
@@ -369,6 +393,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sevbankocabas.firelist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "firelist/Custom/firelist-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +405,7 @@
 			baseConfigurationReference = 90BC87EDFDB73E353434E899 /* Pods-firelist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82QJ699VC6;
@@ -390,6 +417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sevbankocabas.firelist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "firelist/Custom/firelist-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
