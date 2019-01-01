@@ -1,6 +1,6 @@
 # firelist
 
-A Simplest TODO List Application developed by using Firebase Authentication and Firebase Database
+A Simplest TODO List Application developed by using Swift 4 and Firebase Authentication and Firebase Database
 
 ## Features 
 
