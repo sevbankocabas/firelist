@@ -16,7 +16,6 @@ class CategoriesController: SwipeViewController {
     var userID: String?
     var selectedCategoryID: String?
     var selectedCategoryName: String?
-    var numberOfTasks: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
@@ -35,8 +34,7 @@ class CategoriesController: SwipeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        let number = String(describing: categories[indexPath.row].numberOfTasks!)
-        cell.textLabel?.text = "\(categories[indexPath.row].title!) (\(number))"
+        cell.textLabel?.text = categories[indexPath.row].title!
         return cell
 
     }
@@ -54,7 +52,6 @@ class CategoriesController: SwipeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCategoryID = categories[indexPath.row].id
         selectedCategoryName = categories[indexPath.row].title
-        numberOfTasks = categories[indexPath.row].numberOfTasks
         performSegue(withIdentifier: "goToTasks", sender: self)
     }
     
@@ -63,7 +60,6 @@ class CategoriesController: SwipeViewController {
         let TasksVC = segue.destination as! TasksController
         TasksVC.categoryID = selectedCategoryID
         TasksVC.categoryName = selectedCategoryName
-        TasksVC.numberOfTasks = numberOfTasks
         } else {
             handleLogout()
         }
@@ -111,8 +107,7 @@ class CategoriesController: SwipeViewController {
             let data = snapshot.value as? [String: AnyObject] ?? [:]
             let id = data["id"] as? String
             let title = data["title"] as? String
-            let numberOfTasks = data["numberOfTasks"] as? Int
-            let dic = ["id": id as AnyObject, "title": title as AnyObject, "numberOfTasks": numberOfTasks as AnyObject]
+            let dic = ["id": id as AnyObject, "title": title as AnyObject]
             let category = Category(dictionary: dic)
             self.categories.append(category)
             self.tableView.reloadData()

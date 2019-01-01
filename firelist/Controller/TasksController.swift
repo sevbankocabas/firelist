@@ -15,7 +15,6 @@ class TasksController: SwipeViewController {
     var tasks = [Task]()
     var categoryID: String?
     var categoryName: String?
-    var numberOfTasks: Int?
     var ref: DatabaseReference?
     var userID: String?
 
@@ -116,12 +115,8 @@ class TasksController: SwipeViewController {
             
             let key = self.ref!.child("Tasks").child(self.userID!).child(self.categoryID!).childByAutoId().key
             let post = ["id": key!, "title": name, "isDone": isDone] as [String: AnyObject]
-            let number = self.numberOfTasks! + 1
-            self.numberOfTasks = number
-            let update = ["id": self.categoryID! as AnyObject, "title": self.categoryName! as AnyObject, "numberOfTasks": number as AnyObject]
             self.ref!.child("Tasks").child(self.userID!).child(self.categoryID!).child(key!).setValue(post)
             
-            self.ref!.child("Categories").child(self.userID!).child(self.categoryID!).updateChildValues(update)
             self.tableView.reloadData()
             
         }
@@ -146,10 +141,6 @@ class TasksController: SwipeViewController {
         
         guard let taskIdForDeletion = self.tasks[indexPath.row].id else { return}
         ref!.child("Tasks").child(self.userID!).child(self.categoryID!).child(taskIdForDeletion).removeValue()
-        let number = self.numberOfTasks! - 1
-        self.numberOfTasks = number
-        let update = ["id": self.categoryID! as AnyObject, "title": self.categoryName! as AnyObject, "numberOfTasks": number as AnyObject]
-        ref!.child("Categories").child(self.userID!).child(self.categoryID!).updateChildValues(update)
         tasks.remove(at: indexPath.row)
         print(taskIdForDeletion)
         
