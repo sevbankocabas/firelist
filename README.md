@@ -1,6 +1,6 @@
 # firelist
 
-A TODO List App developed by using Firebase Authentication and Firebase Database
+A Simplist TODO List Application developed by using Firebase Authentication and Firebase Database
 
 ## Features 
 
