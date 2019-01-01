@@ -17,4 +17,4 @@ A Simplest TODO List Application developed by using Firebase Authentication and 
 * Firebase
 * SVProgressHUD
 * SwipeCellKit
-* TPKeyboardAvoiding(inserted manually)
+* TPKeyboardAvoiding (inserted manually)
