@@ -10,3 +10,11 @@ A Simplest TODO List Application developed by using Firebase Authentication and 
 * Delete your tasks or categories by swiping with no effort
 * Update your tasks status when they get done
 * They are all handled using by Firebase
+
+
+## Pods
+
+* Firebase
+* SVProgressHUD
+* SwipeCellKit
+* TPKeyboardAvoiding(inserted manually)
